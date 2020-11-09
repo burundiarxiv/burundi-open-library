@@ -8,7 +8,7 @@
 - `npm install`
 
 
-### Run in production
-- `npm run build`
+### Run in development
 - `npm start`
+
 
