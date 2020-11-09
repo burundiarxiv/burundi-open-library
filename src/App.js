@@ -1,8 +1,7 @@
-
 function App() {
   return (
-    <div >
-     
+    <div>
+      <h1>Welcome to Burundi Open Library</h1>
     </div>
   );
 }
