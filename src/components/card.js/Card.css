@@ -1,0 +1,23 @@
+.card {
+  background-color: #eff1f5;
+  border-radius: 5px;
+}
+
+.card:hover {
+  background-color: #dae7f5;
+  border: 2px;
+}
+h4 {
+  color: #32557f;
+  text-decoration: none;
+  background: no-repeat 0 100%;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  transition: background-size 0.3s ease;
+  display: inline-block;
+}
+
+h4:hover,
+h4:focus {
+  background-size: 100% 2px;
+}
