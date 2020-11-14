@@ -12,7 +12,9 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://api.jsonbin.io/b/5fa973febd01877eecdbbc44/2")
+    fetch(
+      "https://raw.githubusercontent.com/burundiarxiv/library-parser/master/export/chap-2-1-2.json"
+    )
       .then((response) => response.json())
       .then((users) => this.setState({ books: users }));
   }
@@ -48,7 +50,6 @@ class App extends Component {
       </div>
     );
   }
-
 }
 
 export default App;
