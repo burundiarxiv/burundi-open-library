@@ -31,27 +31,22 @@ const App = () => {
   };
 
   return (
-    <>
-      <div className="App">
-        <header>
-          <h1>Burundi Open Library</h1>
-          <p className="title">
-            Free and open access to a general library on books written on
-            Burundi
-          </p>
-          <div className="search">
-            <input
-              type="search"
-              placeholder="Search for books"
-              onChange={onChangeHandler}
-            />
-          </div>
-        </header>
-        <body>
-          <CardList books={books} />
-        </body>
-      </div>
-    </>
+    <div className="App">
+      <header>
+        <h1>Burundi Open Library</h1>
+        <p className="title">
+          Free and open access to a general library on books written on Burundi
+        </p>
+        <div className="search">
+          <input
+            type="search"
+            placeholder="Search for books"
+            onChange={onChangeHandler}
+          />
+        </div>
+      </header>
+      <CardList books={books} />
+    </div>
   );
 };
 
