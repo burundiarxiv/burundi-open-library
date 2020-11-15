@@ -4,8 +4,8 @@
 
 ### Installation
 
-- `git clone git@github.com:burundiarxiv/burundi-open-library.git`
-- `cd burundi-open-library`
+- `git clone git@github.com:burundiarxiv/open-library.git`
+- `cd open-library`
 - `npm install`
 
 ### Run in development
