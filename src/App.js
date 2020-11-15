@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/burundiarxiv/library-parser/master/export/chap-2-1-2.json"
+      "https://raw.githubusercontent.com/burundiarxiv/library-parser/master/export/library.json"
     )
       .then((response) => response.json())
       .then((data) => {
