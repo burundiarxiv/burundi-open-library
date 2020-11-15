@@ -2,10 +2,11 @@ import React from "react";
 import Card from "../card.js/Card";
 import "./CardList.css";
 
-const CardList = (props) => (
+const CardList = ({ books }) => (
   <div className="card-list">
-    {props.books.map((book) => (
-      <Card book={book} />
+    <p>{books.length} books found</p>
+    {books.map((book, bookIndex) => (
+      <Card key={bookIndex} book={book} />
     ))}
   </div>
 );
