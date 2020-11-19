@@ -1,13 +1,20 @@
-import React from "react";
-import "./Card.css";
+import React from 'react';
+import { Heading, Box, Text } from '@chakra-ui/react';
 const Card = ({ book }) => {
   const { title, authors, line } = book;
   return (
-    <div className="card">
-      <h4 style={{ color: "#4a5568" }}>{title}</h4>
-      <h5>Auteurs: {authors}</h5>
-      <p>Note: {line}</p>
-    </div>
+    <Box boxShadow="base" p={5} borderRadius="lg" _hover={{boxShadow: "md"}}>
+      <Heading as="h4" size="sm">{title}</Heading>
+      <Text mt={3} mb={3}>
+        <Text as="strong">Auteurs: </Text> 
+        {authors}
+      </Text>
+      
+      <Text>
+        <Text as="strong">Note: </Text> 
+          {line}
+        </Text>
+    </Box>
   );
 };
 

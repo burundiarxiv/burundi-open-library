@@ -1,14 +1,18 @@
-import React from "react";
-import Card from "../card.js/Card";
-import "./CardList.css";
+import React from 'react';
+import { Heading, Box, SimpleGrid } from '@chakra-ui/react';
+import Card from '../card.js/Card';
 
 const CardList = ({ books }) => (
-  <div className="card-list">
-    <p>{books.length} books found</p>
-    {books.map((book, bookIndex) => (
-      <Card key={bookIndex} book={book} />
-    ))}
-  </div>
+  <Box>
+    <Heading as="h2" m="30px 0">Books found</Heading>
+    
+    <SimpleGrid columns={{sm: 1, md: 2, lg: 3}}  spacing={10}>
+      {books.map((book, bookIndex) => (
+        <Card key={bookIndex} book={book} />
+      ))}
+    </SimpleGrid>
+  </Box>
+    
 );
 
 export default CardList;
