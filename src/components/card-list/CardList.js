@@ -4,7 +4,7 @@ import Card from '../card/Card';
 
 const CardList = ({ books }) => (
   <Box>
-    <Heading as="h2" m="30px 0">{books.length}Books found</Heading>
+    <Heading as="h2" m="30px 0">{books.length} Books found</Heading>
     
     <SimpleGrid columns={{sm: 1, md: 2, lg: 3}}  spacing={10}>
       {books.map((book, bookIndex) => (
