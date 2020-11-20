@@ -41,7 +41,7 @@ const App = () => {
             Free and open access to a general library on resources written on
             Burundi
           </Text>
-          <Input placeholder="Tap your query here" onChange={onChangeHandler} />
+          <Input placeholder="Enter your query here" onChange={onChangeHandler} />
         </Box>
       </Box>
 
