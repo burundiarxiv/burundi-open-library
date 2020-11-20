@@ -38,10 +38,10 @@ const App = () => {
             Burundi Open Library
           </Heading>
           <Text mt={2} mb={2}>
-            Free and open access to a general library on books written on
+            Free and open access to a general library on resources written on
             Burundi
           </Text>
-          <Input placeholder="Search for books" onChange={onChangeHandler} />
+          <Input placeholder="Tap your query here" onChange={onChangeHandler} />
         </Box>
       </Box>
 
