@@ -56,6 +56,7 @@ const App = () => {
                 Burundi
               </Text>
               <Input
+                focusBorderColor="#4a5568"
                 placeholder="Search for books"
                 onChange={onChangeHandler}
               />
