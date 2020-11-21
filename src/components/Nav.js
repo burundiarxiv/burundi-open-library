@@ -7,6 +7,7 @@ function Nav() {
     listStyle: 'none',
     justifyContent: 'space-around',
     color: '#0070f3',
+    fontFamily: 'Inter, sans-serif',
     paddingTop: '2vh',
   };
   return (
