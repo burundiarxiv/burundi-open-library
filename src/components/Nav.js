@@ -25,7 +25,7 @@ function Nav() {
           <li>How To Use The Platform</li>
         </Link>
         <Link to="/bibligrapic-content">
-          <li>Bibligrapic Content</li>
+          <li>Bibliographic Content</li>
         </Link>
       </ul>
     </nav>
