@@ -34,6 +34,7 @@ const App = () => {
       {/* Header */}
       <Box as="header" boxShadow="sm">
         <Box width="700px" maxW="90%" m="0 auto" textAlign="center" p="30px 0" >
+        <Box width="50%" m="0 auto" textAlign="center" p="30px 0" >
           <Heading as="h1" size="lg" >
             Burundi Open Library
           </Heading>
@@ -42,6 +43,10 @@ const App = () => {
             Burundi
           </Text>
           <Input placeholder="Enter your query here" onChange={onChangeHandler} />
+            Free and open access to a general library on books written on
+            Burundi
+          </Text>
+          <Input placeholder="Search for books" onChange={onChangeHandler} />
         </Box>
       </Box>
 
