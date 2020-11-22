@@ -33,7 +33,7 @@ const App = () => {
     <ChakraProvider>
       {/* Header */}
       <Box as="header" boxShadow="sm">
-        <Box width="50%" m="0 auto" textAlign="center" p="30px 0">
+        <Box width="700px" maxW="90%" m="0 auto" textAlign="center" p="30px 0">
           <Heading as="h1" size="lg">
             Librairie Numérique sur le Burundi
           </Heading>
