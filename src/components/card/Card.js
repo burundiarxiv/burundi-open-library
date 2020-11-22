@@ -11,7 +11,6 @@ const Card = ({ ressource }) => {
         <Text as="strong">Auteurs: </Text>
         {authors.join('; ')}
       </Text>
-
       <Text>
         <Text as="strong">Année: </Text>
         {year}
