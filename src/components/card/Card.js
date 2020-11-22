@@ -1,6 +1,5 @@
 import React from 'react';
 import { Heading, Box, Text } from '@chakra-ui/react';
-
 const Card = ({ book }) => {
   const { title, authors, line } = book;
   return (

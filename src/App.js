@@ -33,15 +33,16 @@ const App = () => {
     <ChakraProvider>
       {/* Header */}
       <Box as="header" boxShadow="sm">
-        <Box width="50%" m="0 auto" textAlign="center" p="30px 0" >
+        <Box width="700px" maxW="90%" m="0 auto" textAlign="center" p="30px 0">
           <Heading as="h1" size="lg" >
             Burundi Open Library
           </Heading>
           <Text mt={2} mb={2}>
-            Free and open access to a general library on books written on
+            Free and open access to a general library on resources written on
             Burundi
           </Text>
-          <Input placeholder="Search for books" onChange={onChangeHandler} />
+          <Input placeholder="Enter your query here" onChange={onChangeHandler} />
+          
         </Box>
       </Box>
 
