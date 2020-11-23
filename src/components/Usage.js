@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Usage() {
+const Usage = () => {
   return (
     <div>
       <h1>We're Sorry!</h1>
