@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Nav.css';
 function Nav() {
-  const style = {
+  /* const style = {
     display: 'flex',
     listStyle: 'none',
     justifyContent: 'space-around',
-    color: '#0070f3',
     fontFamily: 'Inter, sans-serif',
     paddingTop: '2vh',
-  };
+    fontWeight: 'bold',
+  }; */
   return (
     <nav>
-      <ul style={style}>
+      <ul className="style">
         <Link to="/">
           <li>Home</li>
         </Link>

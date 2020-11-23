@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChakraProvider, Heading, Box, Text, Input } from '@chakra-ui/react';
 import CardList from './components/CardList';
-import Nav from './components/Nav';
+import Nav from './components/Nav/Nav';
 import Content from './components/Content';
 import About from './components/About';
 import Usage from './components/Usage';
@@ -56,7 +56,6 @@ const App = () => {
                 Burundi
               </Text>
               <Input
-                focusBorderColor="#4a5568"
                 placeholder="Search for books"
                 onChange={onChangeHandler}
               />
