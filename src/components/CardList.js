@@ -1,16 +1,19 @@
 import React from 'react';
 import { Heading, Box, SimpleGrid } from '@chakra-ui/react';
-import Card from './Card';
+import Card from './Card.js';
 
-const CardList = ({ books }) => (
+const CardList = ({ ressources }) => (
   <Box>
     <Heading as="h2" m="30px 0">
-      Books found
+      {ressources.length} {ressources.length === 1 ? 'résultat' : 'résultats'}
     </Heading>
 
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10}>
-      {books.map((book, bookIndex) => (
-        <Card key={bookIndex} book={book} />
+      {ressources.map((ressource, ressourceIndex) => (
+        <Card
+          key={`${ressource.title}-${ressourceIndex}`}
+          ressource={ressource}
+        />
       ))}
     </SimpleGrid>
   </Box>

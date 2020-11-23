@@ -6,19 +6,19 @@ function Nav() {
     <nav>
       <ul className="style">
         <Link to="/">
-          <li>Home</li>
+          <li>Acceuil</li>
         </Link>
         <Link to="/about">
-          <li>About Us</li>
+          <li>A Propos</li>
         </Link>
         <Link to="/ourwork">
-          <li>Our Work</li>
+          <li>Notre Travail</li>
         </Link>
         <Link to="/how-to-use-the-platform">
-          <li>How To Use The Platform</li>
+          <li>Comment Utiliser La Platforme</li>
         </Link>
         <Link to="/bibligrapic-content">
-          <li>Bibliographic Content</li>
+          <li>Contenu Bibliographique</li>
         </Link>
       </ul>
     </nav>

@@ -6,11 +6,11 @@ import Content from './components/Content';
 import About from './components/About';
 import Usage from './components/Usage';
 import OurWork from './components/OurWork';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const App = () => {
   const [library, setLibrary] = useState([]);
-  const [books, setBooks] = useState([]);
+  const [ressources, setRessouces] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -19,20 +19,20 @@ const App = () => {
       .then((response) => response.json())
       .then((data) => {
         setLibrary(data);
-        setBooks(data);
+        setRessouces(data);
       });
   }, []);
 
   const onChangeHandler = (event) => {
     const { value } = event.target;
     if (value === '') {
-      setBooks(library);
+      setRessouces(library);
       return;
     }
-    const filteredBooks = library.filter(({ line }) =>
+    const filteredRessources = library.filter(({ line }) =>
       line.toLowerCase().includes(value.toLowerCase())
     );
-    setBooks(filteredBooks);
+    setRessouces(filteredRessources);
   };
 
   return (
@@ -41,22 +41,16 @@ const App = () => {
         {/* Header */}
         <>
           <Box as="header" boxShadow="sm">
-            <Box
-              width="700px"
-              maxW="90%"
-              m="0 auto"
-              textAlign="center"
-              p="30px 0"
-            >
+            <Box width="50%" m="0 auto" textAlign="center" p="30px 0">
               <Heading as="h1" size="lg">
-                Burundi Open Library
+                Librairie Numérique sur le Burundi
               </Heading>
               <Text mt={2} mb={2}>
-                Free and open access to a general library on books written on
-                Burundi
+                Trouver les références de toutes ressources écrites sur le
+                Burundi entre 1962 et 2019.
               </Text>
               <Input
-                placeholder="Search for books"
+                placeholder="Rechercher une ressource"
                 onChange={onChangeHandler}
               />
               <Nav />
@@ -67,7 +61,7 @@ const App = () => {
         <Box as="main">
           <Box width="1024px" maxW="90%" m="0 auto">
             <Route exact path="/">
-              <CardList books={books} />
+              <CardList ressources={ressources} />
             </Route>
             <Route path="/about" component={About} />
             <Route path="/ourwork" component={OurWork} />
