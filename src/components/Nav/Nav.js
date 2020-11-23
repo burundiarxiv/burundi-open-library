@@ -9,7 +9,7 @@ function Nav() {
           <li>Accueil</li>
         </Link>
         <Link to="/about">
-          <li>A Propos</li>
+          <li>Qui sommes-nous</li>
         </Link>
         <Link to="/ourwork">
           <li>Notre Travail</li>
