@@ -11,7 +11,7 @@ function Nav() {
         <Link to="/about">
           <li>Qui sommes-nous</li>
         </Link>
-        <Link to="/ourwork">
+        <Link to="/our-work">
           <li>Notre Travail</li>
         </Link>
         <Link to="/how-to-use-the-platform">
