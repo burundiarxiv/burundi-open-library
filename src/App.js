@@ -4,7 +4,7 @@ import CardList from './components/card-list/CardList.js';
 
 const App = () => {
   const [library, setLibrary] = useState([]);
-  const [books, setBooks] = useState([]);
+  const [ressources, setRessouces] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -13,20 +13,20 @@ const App = () => {
       .then((response) => response.json())
       .then((data) => {
         setLibrary(data);
-        setBooks(data);
+        setRessouces(data);
       });
   }, []);
 
   const onChangeHandler = (event) => {
     const { value } = event.target;
     if (value === '') {
-      setBooks(library);
+      setRessouces(library);
       return;
     }
-    const filteredBooks = library.filter(({ line }) =>
+    const filteredRessources = library.filter(({ line }) =>
       line.toLowerCase().includes(value.toLowerCase())
     );
-    setBooks(filteredBooks);
+    setRessouces(filteredRessources);
   };
 
   return (
@@ -34,22 +34,24 @@ const App = () => {
       {/* Header */}
       <Box as="header" boxShadow="sm">
         <Box width="700px" maxW="90%" m="0 auto" textAlign="center" p="30px 0">
-          <Heading as="h1" size="lg" >
-            Burundi Open Library
+          <Heading as="h1" size="lg">
+            Librairie Numérique sur le Burundi
           </Heading>
           <Text mt={2} mb={2}>
-            Free and open access to a general library on resources written on
-            Burundi
+            Trouver les références de toutes ressources écrites sur le Burundi
+            entre 1962 et 2019.
           </Text>
-          <Input placeholder="Enter your query here" onChange={onChangeHandler} />
-          
+          <Input
+            placeholder="Rechercher une ressource"
+            onChange={onChangeHandler}
+          />
         </Box>
       </Box>
 
       {/* Main */}
       <Box as="main">
         <Box width="1024px" maxW="90%" m="0 auto">
-          <CardList books={books} />
+          <CardList ressources={ressources} />
         </Box>
       </Box>
     </ChakraProvider>
