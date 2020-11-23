@@ -6,7 +6,7 @@ function Nav() {
     <nav>
       <ul className="style">
         <Link to="/">
-          <li>Acceuil</li>
+          <li>Accueil</li>
         </Link>
         <Link to="/about">
           <li>A Propos</li>
