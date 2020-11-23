@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nav() {
+const Nav = () => {
   return (
     <div>
       <h1>We're Sorry!</h1>
