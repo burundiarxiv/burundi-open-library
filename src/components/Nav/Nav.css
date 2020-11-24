@@ -10,3 +10,6 @@
     display: inline-block;
   }
 }
+.style li:hover {
+  color: #8ac2f2;
+}
