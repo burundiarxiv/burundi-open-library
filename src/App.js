@@ -39,7 +39,9 @@ const App = () => {
     <ChakraProvider>
       <Router>
         {/* Header */}
-        <>
+
+        <Nav />
+        <Route exact path="/">
           <Box as="header" boxShadow="sm">
             <Box width="50%" m="0 auto" textAlign="center" p="30px 0">
               <Heading as="h1" size="lg">
@@ -53,22 +55,20 @@ const App = () => {
                 placeholder="Rechercher une ressource"
                 onChange={onChangeHandler}
               />
-              <Nav />
             </Box>
           </Box>
-        </>
-        {/* Main */}
-        <Box as="main">
-          <Box width="1024px" maxW="90%" m="0 auto">
-            <Route exact path="/">
+
+          {/* Main */}
+          <Box as="main">
+            <Box width="1024px" maxW="90%" m="0 auto">
               <CardList ressources={ressources} />
-            </Route>
-            <Route path="/about" component={About} />
-            <Route path="/ourwork" component={OurWork} />
-            <Route path="/how-to-use-the-platform" component={Usage} />
-            <Route path="/bibligrapic-content" component={Content} />
+            </Box>
           </Box>
-        </Box>
+        </Route>
+        <Route path="/about" component={About} />
+        <Route path="/ourwork" component={OurWork} />
+        <Route path="/how-to-use-the-platform" component={Usage} />
+        <Route path="/bibligrapic-content" component={Content} />
       </Router>
     </ChakraProvider>
   );
