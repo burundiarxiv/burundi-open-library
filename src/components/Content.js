@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Content() {
+const Content = () => {
   return (
     <div>
       <h1>We're Sorry!</h1>
