@@ -66,7 +66,7 @@ const App = () => {
           </Box>
         </Route>
         <Route path="/about-us" component={About} />
-        <Route path="/ourwork" component={OurWork} />
+        <Route path="/our-work" component={OurWork} />
         <Route path="/how-to-use-the-platform" component={Usage} />
         <Route path="/bibligrapic-content" component={Content} />
       </Router>
