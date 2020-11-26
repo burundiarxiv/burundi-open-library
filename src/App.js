@@ -68,7 +68,7 @@ const App = () => {
         <Route path="/about-us" component={About} />
         <Route path="/our-work" component={OurWork} />
         <Route path="/how-to-use-the-platform" component={Usage} />
-        <Route path="/bibligrapic-content" component={Content} />
+        <Route path="/bibliographic-content" component={Content} />
       </Router>
     </ChakraProvider>
   );
