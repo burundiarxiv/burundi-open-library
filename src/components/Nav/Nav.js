@@ -17,7 +17,7 @@ function Nav() {
         <Link to="/how-to-use-the-platform">
           <li>Comment Utiliser La Platforme</li>
         </Link>
-        <Link to="/bibligrapic-content">
+        <Link to="/bibliographic-content">
           <li>Contenu Bibliographique</li>
         </Link>
       </ul>
