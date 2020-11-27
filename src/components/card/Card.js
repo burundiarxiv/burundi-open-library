@@ -3,7 +3,7 @@ import { Heading, Box, Text } from '@chakra-ui/react';
 const Card = ({ ressource }) => {
   const { title, authors, year } = ressource;
   return (
-    <Box boxShadow="base" p={5} borderRadius="lg" _hover={{ boxShadow: 'md' }}>
+    <Box boxShadow="base" p={5} borderRadius="lg" _hover={{ boxShadow: '2xl' }}>
       <Heading as="h4" size="sm">
         {title}
       </Heading>

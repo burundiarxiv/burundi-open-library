@@ -1,0 +1,15 @@
+.style {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding-top: 2vh;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .style {
+    display: inline-block;
+  }
+}
+.style li:hover {
+  color: #8ac2f2;
+}
