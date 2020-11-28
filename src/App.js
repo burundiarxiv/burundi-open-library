@@ -5,7 +5,9 @@ import Content from './components/Content';
 import About from './components/About';
 import Usage from './components/Usage';
 import OurWork from './components/OurWork';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import CardList from './components/card-list/CardList.js';
 
 const App = () => {
@@ -41,6 +43,7 @@ const App = () => {
         {/* Header */}
 
         <Nav />
+
         <Switch>
           <Route exact path="/">
             <Box as="header" boxShadow="sm">
