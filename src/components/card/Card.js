@@ -1,19 +1,20 @@
 import React from 'react';
 import { Heading, Box, Text } from '@chakra-ui/react';
-const Card = ({ book }) => {
-  const { title, authors, line } = book;
+const Card = ({ ressource }) => {
+  const { title, authors, year } = ressource;
   return (
-    <Box boxShadow="base" p={5} borderRadius="lg" _hover={{boxShadow: "md"}}>
-      <Heading as="h4" size="sm">{title}</Heading>
+    <Box boxShadow="base" p={5} borderRadius="lg" _hover={{ boxShadow: '2xl' }}>
+      <Heading as="h4" size="sm">
+        {title}
+      </Heading>
       <Text mt={3} mb={3}>
-        <Text as="strong">Auteurs: </Text> 
-        {authors}
+        <Text as="strong">Auteurs: </Text>
+        {authors.join('; ')}
       </Text>
-      
       <Text>
-        <Text as="strong">Note: </Text> 
-          {line}
-        </Text>
+        <Text as="strong">Année: </Text>
+        {year}
+      </Text>
     </Box>
   );
 };
