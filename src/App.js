@@ -7,6 +7,7 @@ import Usage from './components/Usage';
 import OurWork from './components/OurWork';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CardList from './components/card-list/CardList.js';
+import Categories from './components/categories/Categories';
 
 const App = () => {
   const [library, setLibrary] = useState([]);
@@ -22,6 +23,17 @@ const App = () => {
         setRessouces(data);
       });
   }, []);
+
+  const filterItems = (category) => {
+    if (category === 'Tous') {
+      setRessouces(library);
+      return;
+    }
+    const tag = category;
+    const newItems = library.filter(({ tags }) => tags.includes(tag));
+
+    setRessouces(newItems);
+  };
 
   const onChangeHandler = (event) => {
     const { value } = event.target;
@@ -60,7 +72,10 @@ const App = () => {
 
           {/* Main */}
           <Box as="main">
-            <Box width="1024px" maxW="90%" m="0 auto">
+            <Box marginLeft="20px" fontWeight="extrabold">
+              <Categories filterItems={filterItems} library={library} />
+            </Box>
+            <Box width="1024px" maxW="90%" ml="310px">
               <CardList ressources={ressources} />
             </Box>
           </Box>
