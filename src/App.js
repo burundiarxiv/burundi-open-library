@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChakraProvider, Heading, Box, Text, Input } from '@chakra-ui/react';
+import './app.css';
 import Nav from './components/Nav/Nav';
 import Content from './components/Content';
 import About from './components/About';
@@ -75,7 +76,7 @@ const App = () => {
             <Box marginLeft="20px" fontWeight="extrabold">
               <Categories filterItems={filterItems} library={library} />
             </Box>
-            <Box width="1024px" maxW="90%" ml="310px">
+            <Box className="cool" width="1024px" maxW="90%">
               <CardList ressources={ressources} />
             </Box>
           </Box>

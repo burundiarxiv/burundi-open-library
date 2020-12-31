@@ -21,3 +21,9 @@
 .left-bar button:focus {
   outline: 1px dashed #d0d8e2;
 }
+
+@media screen and (max-width: 992px) {
+  .left-bar {
+    visibility: hidden;
+  }
+}
