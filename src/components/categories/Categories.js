@@ -1,6 +1,7 @@
 import React from 'react';
 import './categories.css';
 const Categories = ({ filterItems, library }) => {
+<<<<<<< HEAD
   // The purpose of this three lines is to convert the tags
   // that are in subarray into one array, so that i can map through it
   // the problem was that when i was trying to map through an
@@ -10,9 +11,17 @@ const Categories = ({ filterItems, library }) => {
   const listOfTagsIntoOneString = listOfTags.toString();
   const convertedListOfTags = listOfTagsIntoOneString.split(',');
 
+=======
+>>>>>>> 5f0de5f854d1a6f1822d324d861812a56f26fbfb
   const allCategories = [
     'Tous',
-    ...new Set(convertedListOfTags.map((item) => item)),
+    ...new Set(
+      library
+        .map((item) => item.tags)
+        .toString()
+        .split(',')
+        .map((item) => item)
+    ),
   ];
 
   return (

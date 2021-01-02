@@ -30,10 +30,7 @@ const App = () => {
       setRessouces(library);
       return;
     }
-    const tag = category;
-    const newItems = library.filter(({ tags }) => tags.includes(tag));
-
-    setRessouces(newItems);
+     setRessouces(library.filter(({ tags }) => tags.includes(category)));
   };
 
   const onChangeHandler = (event) => {
