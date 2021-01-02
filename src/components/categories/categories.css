@@ -4,7 +4,7 @@
   width: 50px;
   height: 10px;
   line-height: 40px;
-  padding-left: 5%;
+  padding-left: 2.5%;
   color: #0070f3;
   font-weight: bolder;
   font-size: 17px;
@@ -16,10 +16,12 @@
   white-space: nowrap;
 }
 .left-bar button:hover {
-  background-color: #d0d8e2;
+  color: darkblue;
 }
 .left-bar button:focus {
-  outline: 1px dashed #d0d8e2;
+  outline: none;
+  color: darkblue;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 992px) {
