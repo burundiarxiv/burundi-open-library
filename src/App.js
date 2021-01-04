@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChakraProvider, Heading, Box, Text, Input } from '@chakra-ui/react';
+import './app.css';
 import Nav from './components/Nav/Nav';
 import Content from './components/Content';
 import About from './components/About';
@@ -7,6 +8,7 @@ import Usage from './components/Usage';
 import OurWork from './components/OurWork';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CardList from './components/card-list/CardList.js';
+import Categories from './components/categories/Categories';
 
 const App = () => {
   const [library, setLibrary] = useState([]);
@@ -22,6 +24,14 @@ const App = () => {
         setRessouces(data);
       });
   }, []);
+
+  const filterItems = (category) => {
+    if (category === 'Tous') {
+      setRessouces(library);
+      return;
+    }
+     setRessouces(library.filter(({ tags }) => tags.includes(category)));
+  };
 
   const onChangeHandler = (event) => {
     const { value } = event.target;
@@ -60,7 +70,10 @@ const App = () => {
 
           {/* Main */}
           <Box as="main">
-            <Box width="1024px" maxW="90%" m="0 auto">
+            <Box marginLeft="20px" fontWeight="extrabold">
+              <Categories filterItems={filterItems} library={library} />
+            </Box>
+            <Box className="cool" width="1024px" maxW="90%">
               <CardList ressources={ressources} />
             </Box>
           </Box>

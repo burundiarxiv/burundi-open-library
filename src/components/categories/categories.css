@@ -1,0 +1,31 @@
+.left-bar {
+  position: absolute;
+  left: auto;
+  width: 50px;
+  height: 10px;
+  line-height: 40px;
+  padding-left: 2.5%;
+  color: #0070f3;
+  font-weight: bolder;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.left-bar button {
+  text-align: center;
+  white-space: nowrap;
+}
+.left-bar button:hover {
+  color: darkblue;
+}
+.left-bar button:focus {
+  outline: none;
+  color: darkblue;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 992px) {
+  .left-bar {
+    visibility: hidden;
+  }
+}
