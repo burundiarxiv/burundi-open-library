@@ -1,15 +1,22 @@
-.style {
+.navbar {
   display: flex;
-  list-style: none;
   justify-content: space-around;
   padding-top: 2vh;
   font-weight: bold;
+  overflow: hidden;
 }
-@media screen and (max-width: 600px) {
-  .style {
-    display: inline-block;
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    position: relative;
+  }
+
+  .icon {
+    display: block;
+    position: absolute;
   }
 }
+
 .style li:hover {
   color: #8ac2f2;
 }

@@ -3,25 +3,18 @@ import { Link } from 'react-router-dom';
 import './Nav.css';
 function Nav() {
   return (
-    <nav>
-      <ul className="style">
-        <Link to="/">
-          <li>Accueil</li>
-        </Link>
-        <Link to="/about-us">
-          <li>Qui sommes-nous</li>
-        </Link>
-        <Link to="/our-work">
-          <li>Notre Travail</li>
-        </Link>
-        <Link to="/how-to-use-the-platform">
-          <li>Comment Utiliser La Platforme</li>
-        </Link>
-        <Link to="/bibliographic-content">
-          <li>Contenu Bibliographique</li>
-        </Link>
-      </ul>
-    </nav>
+    <div className="navbar">
+      <div id="myLinks">
+        <Link to="/">Accueil</Link>
+        <Link to="/about-us">Qui sommes-nous</Link>
+        <Link to="/our-work">Notre Travail</Link>
+        <Link to="/how-to-use-the-platform">Comment Utiliser La Platforme</Link>
+        <Link to="/bibliographic-content">Contenu Bibliographique</Link>
+      </div>
+      <button>
+        <i className="fa fa-bars icon"></i>
+      </button>
+    </div>
   );
 }
 
