@@ -3,18 +3,37 @@ import { Link } from 'react-router-dom';
 import './Nav.css';
 function Nav() {
   return (
-    <div className="navbar">
-      <div id="myLinks">
-        <Link to="/">Accueil</Link>
-        <Link to="/about-us">Qui sommes-nous</Link>
-        <Link to="/our-work">Notre Travail</Link>
-        <Link to="/how-to-use-the-platform">Comment Utiliser La Platforme</Link>
-        <Link to="/bibliographic-content">Contenu Bibliographique</Link>
-      </div>
-      <button>
-        <i className="fa fa-bars icon"></i>
-      </button>
-    </div>
+    <nav>
+      {/*  <input type="checkbox" id="check" />
+      <label for="check" className="checkbtn">
+        <i className="fas fa-bars"></i>
+      </label> */}
+      <ul>
+        <li>
+          <Link to="/" className="#true">
+            Accueil
+          </Link>
+        </li>
+        <li>
+          <Link to="/about-us" className="#true">
+            Qui sommes-nous
+          </Link>
+        </li>
+        <li>
+          <Link to="/our-work" className="#true">
+            Notre Travail
+          </Link>
+        </li>
+        <li>
+          <Link to="/how-to-use-the-platform">
+            Comment Utiliser La Platforme
+          </Link>
+        </li>
+        <li>
+          <Link to="/bibliographic-content">Contenu Bibliographique</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
