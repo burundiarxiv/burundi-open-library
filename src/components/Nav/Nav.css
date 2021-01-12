@@ -10,10 +10,7 @@ ul {
 }
 .icon {
   outline: none;
-  float: right;
-  margin-left: 0%;
-  padding-right: 5%;
-  font-size: 25px;
+  /*  */
 
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -41,6 +38,12 @@ ul {
   nav {
     display: none;
     transition: all 4s;
+  }
+  .icon {
+    float: right;
+    margin-left: 0%;
+    padding-right: 5%;
+    font-size: 25px;
   }
 }
 nav ul li:hover {
