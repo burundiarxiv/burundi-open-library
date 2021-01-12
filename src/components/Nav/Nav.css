@@ -24,9 +24,6 @@ ul {
 @media screen and (min-width: 600px) {
   .icon {
     display: none;
-    margin-left: 0%;
-    padding-right: 5%;
-    font-size: 25px;
   }
 }
 
@@ -43,6 +40,9 @@ ul {
   }
   .icon {
     float: right;
+    margin-left: 0%;
+    padding-right: 5%;
+    font-size: 25px;
   }
 }
 nav ul li:hover {
