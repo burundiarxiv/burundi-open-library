@@ -1,22 +1,40 @@
 nav ul {
   display: flex;
-
   justify-content: space-around;
   padding-top: 2vh;
   font-weight: bold;
 }
+
 ul {
   list-style: none;
 }
+.icon {
+  outline: none;
+  float: right;
+  margin-left: 0%;
+  padding-right: 5%;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 600px) {
+  .icon {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   nav ul {
     display: inline-block;
-    padding-left: 15%;
     text-align: center;
-
-    padding-bottom: 3%;
+    position: relative;
+    right: -30%;
+    left: 30%;
+  }
+  nav {
+    display: none;
+    transition: all 4s;
   }
 }
-.style li:hover {
+nav ul li:hover {
   color: #8ac2f2;
 }
