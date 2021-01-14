@@ -30,7 +30,7 @@ const App = () => {
       setRessouces(library);
       return;
     }
-     setRessouces(library.filter(({ tags }) => tags.includes(category)));
+    setRessouces(library.filter(({ tags }) => tags.includes(category)));
   };
 
   const onChangeHandler = (event) => {
@@ -49,7 +49,6 @@ const App = () => {
     <ChakraProvider>
       <Router>
         {/* Header */}
-
         <Nav />
         <Route exact path="/">
           <Box as="header" boxShadow="sm">

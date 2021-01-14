@@ -1,15 +1,50 @@
-.style {
+nav ul {
   display: flex;
-  list-style: none;
   justify-content: space-around;
   padding-top: 2vh;
   font-weight: bold;
 }
-@media screen and (max-width: 600px) {
-  .style {
-    display: inline-block;
+
+ul {
+  list-style: none;
+}
+.icon {
+  outline: none;
+  /*  */
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+@media screen and (min-width: 600px) {
+  .icon {
+    display: none;
   }
 }
-.style li:hover {
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    right: -30%;
+    left: 30%;
+  }
+  nav {
+    display: none;
+  }
+  .icon {
+    float: right;
+    margin-left: 0%;
+    padding-right: 5%;
+    font-size: 25px;
+  }
+}
+nav ul li:hover {
   color: #8ac2f2;
 }
