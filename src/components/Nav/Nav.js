@@ -2,37 +2,40 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 function Nav() {
-  const [toggle, setToggle] = useState(false);
-  const [toggleType, setToggleType] = useState('fas fa-bars');
+  const [toggle, setToggle] = useState({
+    value: false,
+    type: 'fas fa-bars',
+  });
   const [width, setWidth] = useState(window.innerWidth);
 
   const checkWidth = () => {
     setWidth(window.innerWidth);
   };
+
   useEffect(() => {
     window.addEventListener('resize', checkWidth);
     if (width < 600) {
-      setToggle(true);
+      setToggle({ value: true, type: 'fas fa-bars' });
     }
     return () => {
       window.removeEventListener('resize', checkWidth);
     };
   }, [width]);
+
   const changeToggle = () => {
-    if (!toggle) {
+    if (toggle.value) {
       document.getElementById('ul').style.display = 'inline-block';
-      setToggle(true);
-      setToggleType('fas fa-times');
+      setToggle({ value: false, type: 'fas fa-times' });
     } else {
       document.getElementById('ul').style.display = 'none';
-      setToggle(false);
-      setToggleType('fas fa-bars');
+      setToggle({ value: true, type: 'fas fa-bars' });
     }
   };
+
   return (
     <>
       <button className="icon" onClick={changeToggle}>
-        <i className={toggleType}></i>
+        <i className={toggle.type}></i>
       </button>
       <nav id="ul">
         <ul>
